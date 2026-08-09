@@ -1,0 +1,53 @@
+* { box-sizing: border-box; }
+:root { font-family: Inter, system-ui, sans-serif; color: #eaf0fa; background: #080c14; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(circle at 75% 0%, #172243, transparent 35%), #080c14; }
+.app { display: flex; min-height: 100vh; }
+aside { width: 245px; padding: 28px 18px; border-right: 1px solid #1d2739; background: rgba(10,15,25,.85); display: flex; flex-direction: column; }
+.logo { font-size: 25px; font-weight: 900; margin: 0 12px 45px; letter-spacing: -1px; }
+.logo span { color: #7d8cff; }
+nav { display: grid; gap: 7px; }
+nav a { padding: 13px 14px; border-radius: 10px; color: #7f8ca4; text-decoration: none; font-weight: 700; }
+nav a.active, nav a:hover { color: white; background: #182137; }
+.deploy { margin-top: auto; border: 1px solid #273552; background: #111a2b; border-radius: 14px; padding: 15px; }
+.deploy small, .eyebrow { color: #8492ff; letter-spacing: 1.8px; font-size: 10px; font-weight: 900; }
+.deploy strong { display: block; font-size: 12px; margin-top: 9px; }
+.deploy i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #42e68b; box-shadow: 0 0 10px #42e68b; }
+.deploy p { color: #738198; font-size: 11px; margin-bottom: 0; }
+main { flex: 1; padding: 38px 5%; max-width: 1500px; }
+header { display: flex; justify-content: space-between; align-items: center; }
+h1 { margin: 6px 0 0; font-size: 32px; letter-spacing: -1.5px; }
+h2 { margin: 5px 0 20px; font-size: 22px; }
+.header-right { display: flex; gap: 18px; align-items: center; }
+.online { color: #53e795; font-size: 12px; }
+.offline { color: #f07878; font-size: 12px; }
+.avatar { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 12px; background: #7d8cff; font-weight: 900; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 35px 0 20px; }
+.stats > div, .panel { background: rgba(14,21,35,.88); border: 1px solid #202d44; border-radius: 15px; }
+.stats > div { padding: 19px; }
+.stats span { display: block; color: #79869c; font-size: 12px; }
+.stats b { display: block; font-size: 31px; margin: 7px 0; }
+.stats small { color: #52db91; font-size: 10px; }
+.content { display: grid; grid-template-columns: 1.7fr 1fr; gap: 18px; }
+.panel { padding: 22px; }
+.panel-head { display: flex; justify-content: space-between; align-items: start; }
+button { background: #7d8cff; color: white; border: 0; padding: 10px 14px; border-radius: 9px; font-weight: 800; }
+.table { border-top: 1px solid #202c41; }
+.row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 15px; padding: 16px 4px; border-bottom: 1px solid #182235; align-items: center; font-size: 12px; color: #8996aa; }
+.row strong { color: #dce3ef; }
+.row.head { color: #5f6e86; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
+.badge, .priority { width: max-content; padding: 5px 8px; border-radius: 6px; font-size: 9px; font-weight: 900; }
+.badge.done { background: #103628; color: #53e795; }
+.badge.in_progress { background: #29214c; color: #b2a0ff; }
+.badge.testing { background: #3b3016; color: #e7c269; }
+.badge.todo { background: #1b2639; color: #91a0b8; }
+.priority.critical { color: #ff7272; }
+.priority.high { color: #ffb269; }
+.priority.medium { color: #7eafff; }
+.priority.low { color: #7bd9ad; }
+.pipeline { display: grid; gap: 9px; }
+.step { display: grid; grid-template-columns: 30px 1fr auto; align-items: center; padding: 12px; background: #111a2b; border-radius: 10px; }
+.step span { width: 22px; height: 22px; display: grid; place-items: center; background: #293653; border-radius: 50%; font-size: 9px; }
+.step b { font-size: 12px; }
+.step small { color: #52db91; }
+@media(max-width: 1000px) { aside { width: 190px; } .stats { grid-template-columns: repeat(2, 1fr); } .content { grid-template-columns: 1fr; } }
+@media(max-width: 700px) { aside { display: none; } main { padding: 25px 18px; } .stats { grid-template-columns: 1fr 1fr; } .row { grid-template-columns: 2fr 1fr; } .row > :nth-child(n+3) { display: none; } }
