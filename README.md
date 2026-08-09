@@ -1,4 +1,4 @@
-# DevTrack — MERN CI/CD Project
+# DevTrack — CI/CD
 
 DevTrack is a full-stack project and issue management platform built as a portfolio project for demonstrating a real GitHub → Jenkins → Docker → AWS CI/CD pipeline.
 
